@@ -11,13 +11,13 @@ Refer to the associated [lecture notes](https://marcylabschool.gitbook.io/marcy-
   - [Starter Code](#starter-code)
 - [Grading](#grading)
 - [Server Side](#server-side)
-  - [Part 1 — Create an Endpoint and Controller](#part-1--create-an-endpoint-and-controller)
-- [Part 2 — Create an Environment Variable for the API Key](#part-2--create-an-environment-variable-for-the-api-key)
+  - [Step 1 — Create an Endpoint and Controller](#step-1--create-an-endpoint-and-controller)
+  - [Step 2 — Create an Environment Variable for the API Key](#step-2--create-an-environment-variable-for-the-api-key)
 - [Client Side](#client-side)
-  - [Part 3 — Update the Frontend React application:](#part-3--update-the-frontend-react-application)
-  - [Part 4 — Enable Proxy Requests during development](#part-4--enable-proxy-requests-during-development)
+  - [Step 3 — Update the Frontend React application:](#step-3--update-the-frontend-react-application)
+  - [Step 4 — Enable Proxy Requests during development](#step-4--enable-proxy-requests-during-development)
 - [Deployment](#deployment)
-  - [Part 5 — Deploy](#part-5--deploy)
+  - [Step 5 — Deploy](#step-5--deploy)
 - [Bonus Challenge!](#bonus-challenge)
 
 ## Setup
@@ -108,7 +108,9 @@ Before submitting, make sure that these tasks are completed!
 You got this!
 
 ## Server Side
-### Part 1 — Create an Endpoint and Controller 
+### Step 1 — Create an Endpoint and Controller
+
+> ✅ You will know that you've completed this step once you can send a request to [http://localhost:8080/api/gifs](http://localhost:8080/api/gifs) and get back the top trending gifs from the Giphy API. This can be done with, or without storing the API key in an environment variable (that is the next step).
 
 Before you begin, you'll need to log into your [Giphy Developer Dashboard](https://developers.giphy.com/dashboard/) and copy your API Key.
 
@@ -128,7 +130,9 @@ When the server receives a `GET /api/gifs` request, it should:
 
 Test this out by sending a GET request to `http://localhost:8080/api/gifs` in your browser. You should see the fetched gifs with no authorization errors!
 
-## Part 2 — Create an Environment Variable for the API Key
+### Step 2 — Create an Environment Variable for the API Key
+
+> ✅ You will know that you've completed this step once you can push to your GitHub repository without including the `.env` file AND that your API key is not included in any of your repository's files.
 
 To safely store and use your API key, it should be stored as an environment variable in a `.env` file. We'll then use the `dotenv` module to access it. Do the following:
 
@@ -142,7 +146,9 @@ Once you've completed these steps, go ahead and add, commit, and push your code.
 > When it comes time to deploy this project, you will be able to provide the server hosting service with environment variables that will be securely stored and hidden from the public but that your server will have access to.
 
 ## Client Side
-### Part 3 — Update the Frontend React application:
+### Step 3 — Update the Frontend React application:
+
+> ✅ You will know that you've completed this step once you build your frontend and it can fetch and render gifs from your server.
 
 Now that your server has an `/api/gifs` endpoint, our frontend no longer needs to directly interact with the Giphy API. Instead, it can just use the `/api/gifs` endpoint and let the server send the request to Giphy.
 
@@ -160,7 +166,9 @@ Do the following:
 
 ![](./img/localhost-fetch.png)
 
-### Part 4 — Enable Proxy Requests during development
+### Step 4 — Enable Proxy Requests during development
+
+> ✅ You will know that you've completed this step once your frontend continues to work using the Vite development server (`npm run dev`)
 
 Keep the server running and in your second terminal with the `frontend` directory open, run `npm run dev`. As you recall, this starts a development server which will serve the frontend and update each time it is modified. This development server is much more convenient compared to having to run `npm run build` and then use our own server to view the changes.
 
@@ -196,7 +204,9 @@ Doing so tricks our Vite development server into sending requests that start wit
 
 ## Deployment
 
-### Part 5 — Deploy
+### Step 5 — Deploy
+
+> ✅ You will know that you've completed this step once your server is deployed and functional!
 
 When you're done, push your code to github and [follow these steps to deploy using Render](https://marcylabschool.gitbook.io/marcy-lab-school-docs/how-tos/deploying-using-render). Make sure to add environment variables for your API key! 
 

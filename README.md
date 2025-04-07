@@ -1,6 +1,6 @@
 # Securing API Keys
 
-Deployment Link:
+Deployment Link: https://swe-8-2-secure-api-keys-brailyguzman.onrender.com/
 
 In this assignment, you will be given a working Giphy Search React application (remember that assignment?). Then, you'll use Express as a middleman for API requests, allowing us to deploy the project while keeping the API key secure.
 
